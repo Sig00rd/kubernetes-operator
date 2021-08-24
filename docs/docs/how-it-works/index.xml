@@ -30,34 +30,55 @@
         
         
 
-&lt;p&gt;The &lt;strong&gt;Jenkins Operator&lt;/strong&gt; design incorporates the following concepts:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Jenkins Operator&lt;/strong&gt; design incorporates the following concepts:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;watches any changes of manifests and maintain the desired state according to deployed custom resource manifest&lt;/li&gt;
-&lt;li&gt;implements the main reconciliation loop which consists of two smaller reconciliation loops - base and user&lt;/li&gt;
+&lt;li&gt;watching any changes to manifests and maintaining the desired state according to deployed custom resource manifests&lt;/li&gt;
+&lt;li&gt;implementing multiple reconciliation loops that ensure state of particular resources match the desired state defined in the manifests.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jenkinsci.github.io/kubernetes-operator/kubernetes-operator/img/reconcile.png&#34; alt=&#34;reconcile&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Base&lt;/strong&gt; reconciliation loop takes care of reconciling base Jenkins configuration, which consists of:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Jenkins Operator&lt;/strong&gt; supports the following manifests:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Ensure Manifests - monitors any changes in manifests&lt;/li&gt;
-&lt;li&gt;Ensure Jenkins Pod - creates and verifies the status of Jenkins master Pod&lt;/li&gt;
-&lt;li&gt;Ensure Jenkins Configuration - configures Jenkins instance including hardening, initial configuration for plugins, etc.&lt;/li&gt;
-&lt;li&gt;Ensure Jenkins API token - generates Jenkins API token and initialized Jenkins client&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;User&lt;/strong&gt; reconciliation loop takes care of reconciling user provided configuration, which consists of:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Jenkins&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Ensure Restore Job - creates Restore job and ensures that restore has been successfully performed&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Ensure Seed Jobs - creates Seed Jobs and ensures that all of them have been successfully executed&lt;/li&gt;
-&lt;li&gt;Ensure User Configuration - executed user provided configuration, like groovy scripts, configuration as code or plugins&lt;/li&gt;
-&lt;li&gt;Ensure Backup Job -  creates a Backup job and ensures that backup has been successfully performed&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;allows you to control options specific to the Jenkins Controller (Jenkins Master) as well as Kubernetes-specific options such as Roles or PodSpec,&lt;/li&gt;
+&lt;li&gt;it uses an InitContainer to ensure initial configuration,&lt;/li&gt;
+&lt;li&gt;it provides a mechanism for caching plugins, so when the pod restarts, it won&amp;rsquo;t have to download them again.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jenkinsci.github.io/kubernetes-operator/kubernetes-operator/img/phases.png&#34; alt=&#34;reconcile&#34; /&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;JenkinsKubernetesAgent&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;allows you to control options specific to the Jenkins Agents as well as Kubernetes-specific options such as Roles or PodSpec,&lt;/li&gt;
+&lt;li&gt;allows you to define agents using custom images,&lt;/li&gt;
+&lt;li&gt;a seedJob agent is required when using JenkinsSeedJobs, if it isn&amp;rsquo;t present, one will be created by the operator.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;JenkinsSeedJob&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;uses Jenkins &lt;a href=&#34;https://plugins.jenkins.io/job-dsl/&#34;&gt;Job DSL&lt;/a&gt; plugin,&lt;/li&gt;
+&lt;li&gt;it is a recommended way to define your jobs,&lt;/li&gt;
+&lt;li&gt;jobs defined as JenkinsSeedJobs will be recreated on Jenkins restart.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;JenkinsConfigurationAsCode&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;uses Jenkins &lt;a href=&#34;https://plugins.jenkins.io/configuration-as-code/&#34;&gt;Configuration as Code&lt;/a&gt; plugin,&lt;/li&gt;
+&lt;li&gt;allows you to control the Jenkins&amp;rsquo; state directly, they will be re-applied on Jenkins restart.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;JenkinsGroovyScript&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;allows you to control the Jenkins&amp;rsquo; state directly, they will be re-applied on Jenkins restart,&lt;/li&gt;
+&lt;li&gt;if your scripts require to be executed in a particular order, you can use the DependsOn field in Custom Resource,&lt;/li&gt;
+&lt;li&gt;JenkinsGroovyScripts are executed after JenkinsConfigurationAsCode.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;operator-state&#34;&gt;Operator State&lt;/h2&gt;
 

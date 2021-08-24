@@ -20,25 +20,25 @@
 <link rel="icon" type="image/png" href="/kubernetes-operator/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/kubernetes-operator/favicons/android-192x192.png"sizes="192x192">
 
-<title>Security | Jenkins Operator</title><meta property="og:title" content="Security" />
-<meta property="og:description" content="Jenkins security and hardening out of the box
+<title>Separate namespaces for Jenkins and Operator | Jenkins Operator</title><meta property="og:title" content="Separate namespaces for Jenkins and Operator" />
+<meta property="og:description" content="How to install Jenkins and Jenkins Operator in separate namespaces
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/security/" />
-<meta property="article:published_time" content="2021-08-20T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-08-20T00:00:00+00:00" /><meta property="og:site_name" content="Jenkins Operator" />
-<meta itemprop="name" content="Security">
-<meta itemprop="description" content="Jenkins security and hardening out of the box
+<meta property="og:url" content="https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/separate-namespaces/" />
+<meta property="article:published_time" content="2019-08-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-08-05T00:00:00+00:00" /><meta property="og:site_name" content="Jenkins Operator" />
+<meta itemprop="name" content="Separate namespaces for Jenkins and Operator">
+<meta itemprop="description" content="How to install Jenkins and Jenkins Operator in separate namespaces
 ">
-<meta itemprop="datePublished" content="2021-08-20T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-08-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="770">
+<meta itemprop="datePublished" content="2019-08-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-08-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="297">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Security"/>
-<meta name="twitter:description" content="Jenkins security and hardening out of the box
+<meta name="twitter:title" content="Separate namespaces for Jenkins and Operator"/>
+<meta name="twitter:description" content="How to install Jenkins and Jenkins Operator in separate namespaces
 "/>
 
 
@@ -54,7 +54,7 @@
   crossorigin="anonymous"></script>
 
 
-    <title>Security | Jenkins Operator</title>
+    <title>Separate namespaces for Jenkins and Operator | Jenkins Operator</title>
   </head>
   <body class="td-page">
     <header>
@@ -179,10 +179,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/kubernetes-operator/docs/getting-started/latest/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Latest (v0.6.x)</a>
+    <a  href="/kubernetes-operator/docs/getting-started/latest/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Latest (v0.7.x)</a>
   </li>
   <ul>
-    <li class="collapse show" id="kubernetes-operator-docs-getting-started-latest">
+    <li class="collapse " id="kubernetes-operator-docs-getting-started-latest">
       
       
       
@@ -213,31 +213,19 @@
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-latest-configuring-backup-and-restore" href="/kubernetes-operator/docs/getting-started/latest/configuring-backup-and-restore/">Configuring backup and restore</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-latest-separate-namespaces" href="/kubernetes-operator/docs/getting-started/latest/separate-namespaces/">Separate namespaces for Jenkins and Operator</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-latest-custom-backup-and-restore" href="/kubernetes-operator/docs/getting-started/latest/custom-backup-and-restore/">Custom backup and restore providers</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-latest-environment-variables" href="/kubernetes-operator/docs/getting-started/latest/environment-variables/">Environment Variables</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-latest-notifications" href="/kubernetes-operator/docs/getting-started/latest/notifications/">Notifications</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-kubernetes-operator-docs-getting-started-latest-security" href="/kubernetes-operator/docs/getting-started/latest/security/">Security</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-latest-aks" href="/kubernetes-operator/docs/getting-started/latest/aks/">AKS</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-latest-migration-guide" href="/kubernetes-operator/docs/getting-started/latest/migration-guide/">Migrating from v0.6.x</a>
       
       
       
@@ -250,6 +238,95 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-latest-schema" href="/kubernetes-operator/docs/getting-started/latest/schema/">Schema</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/kubernetes-operator/docs/getting-started/v0.6.x/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">v0.6.x</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="kubernetes-operator-docs-getting-started-v0-6-x">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-v0-6-x-installing-the-operator" href="/kubernetes-operator/docs/getting-started/v0.6.x/installing-the-operator/">Installing the Operator</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-v0-6-x-deploying-jenkins" href="/kubernetes-operator/docs/getting-started/v0.6.x/deploying-jenkins/">Deploying Jenkins</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-v0-6-x-customizing-jenkins" href="/kubernetes-operator/docs/getting-started/v0.6.x/customizing-jenkins/">Customizing Jenkins</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-v0-6-x-configuring-seed-jobs-and-pipelines" href="/kubernetes-operator/docs/getting-started/v0.6.x/configuring-seed-jobs-and-pipelines/">Configuring Seed Jobs and Pipelines</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-v0-6-x-configuring-backup-and-restore" href="/kubernetes-operator/docs/getting-started/v0.6.x/configuring-backup-and-restore/">Configuring backup and restore</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-v0-6-x-custom-backup-and-restore" href="/kubernetes-operator/docs/getting-started/v0.6.x/custom-backup-and-restore/">Custom backup and restore providers</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-v0-6-x-notifications" href="/kubernetes-operator/docs/getting-started/v0.6.x/notifications/">Notifications</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-kubernetes-operator-docs-getting-started-v0-6-x-separate-namespaces" href="/kubernetes-operator/docs/getting-started/v0.6.x/separate-namespaces/">Separate namespaces for Jenkins and Operator</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-v0-6-x-aks" href="/kubernetes-operator/docs/getting-started/v0.6.x/aks/">AKS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-v0-6-x-openshift" href="/kubernetes-operator/docs/getting-started/v0.6.x/openshift/">OpenShift</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-kubernetes-operator-docs-getting-started-v0-6-x-schema" href="/kubernetes-operator/docs/getting-started/v0.6.x/schema/">Schema</a>
       
       
     </li>
@@ -671,6 +748,29 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/kubernetes-operator/docs/security/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Security</a>
+  </li>
+  <ul>
+    <li class="collapse " id="kubernetes-operator-docs-security">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/kubernetes-operator/docs/troubleshooting/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Troubleshooting</a>
   </li>
   <ul>
@@ -756,8 +856,8 @@
           
           
           
-        <a href="https://github.com/jenkinsci/kubernetes-operator/edit/master/website/content/en/docs/Getting%20Started/latest/security.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-        <a href="https://github.com/jenkinsci/kubernetes-operator/issues/new?labels=documentation&amp;template=documentation.md&amp;title=Security" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+        <a href="https://github.com/jenkinsci/kubernetes-operator/edit/master/website/content/en/docs/Getting%20Started/v0.6.x/separate-namespaces.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+        <a href="https://github.com/jenkinsci/kubernetes-operator/issues/new?labels=documentation&amp;template=documentation.md&amp;title=Separate%20namespaces%20for%20Jenkins%20and%20Operator" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
           
               
               <a href="https://github.com/jenkinsci/kubernetes-operator/issues/new/choose" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
@@ -766,22 +866,6 @@
     
 
 
-
-
-
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#jenkins-access-control">Jenkins Access Control</a></li>
-<li><a href="#jenkins-hardening">Jenkins Hardening</a></li>
-<li><a href="#jenkins-api">Jenkins API</a></li>
-<li><a href="#kubernetes">Kubernetes</a></li>
-<li><a href="#setup-jenkins-operator-and-jenkins-in-separate-namespaces">Setup Jenkins Operator and Jenkins in separate namespaces</a></li>
-<li><a href="#report-a-security-vulnerability">Report a Security Vulnerability</a></li>
-</ul></li>
-</ul>
-</nav>
 
 
 
@@ -818,14 +902,14 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/">Latest (v0.6.x)</a>
+	<a href="https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/">v0.6.x</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/security/">Security</a>
+	<a href="https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/separate-namespaces/">Separate namespaces for Jenkins and Operator</a>
 </li>
 
 	</ol>
@@ -833,67 +917,9 @@
 
             
 <div class="td-content">
-	<h1>Security</h1>
-	<div class="lead">Jenkins security and hardening out of the box</div>
-	
-
-<p>By default <strong>Jenkins Operator</strong> performs an initial security hardening of Jenkins instance
-via groovy scripts to prevent any security gaps.</p>
-
-<h2 id="jenkins-access-control">Jenkins Access Control</h2>
-
-<p>Currently <strong>Jenkins Operator</strong> generates a username and random password and stores them in a Kubernetes Secret.
-However any other authorization mechanisms are possible and can be done via groovy scripts or configuration as code plugin.
-For more information take a look at <a href="/kubernetes-operator/docs/getting-started/latest/customizing-jenkins/">getting-started#jenkins-customization</a>.</p>
-
-<p>Any change to Security Realm or Authorization requires that user called <code>jenkins-operator</code> must have admin rights
-because <strong>Jenkins Operator</strong> calls Jenkins API.</p>
-
-<h2 id="jenkins-hardening">Jenkins Hardening</h2>
-
-<p>The list below describes all the default security setting configured by the <strong>Jenkins Operator</strong>:</p>
-
-<ul>
-<li>basic settings - use <code>Mode.EXCLUSIVE</code> - Jobs must specify that they want to run on master node</li>
-<li>enable CSRF - Cross Site Request Forgery Protection is enabled</li>
-<li>disable usage stats - Jenkins usage stats submitting is disabled</li>
-<li>enable master access control - Slave to Master Access Control is enabled</li>
-<li>disable old JNLP protocols - <code>JNLP3-connect</code>, <code>JNLP2-connect</code> and <code>JNLP-connect</code> are disabled</li>
-<li>disable CLI - CLI access of <code>/cli</code> URL is disabled</li>
-<li>configure kubernetes-plugin - secure configuration for Kubernetes plugin</li>
-</ul>
-
-<p>If you would like to dig a little bit into the code, take a look <a href="https://github.com/jenkinsci/kubernetes-operator/blob/master/pkg/configuration/base/resources/base_configuration_configmap.go">here</a>.</p>
-
-<h2 id="jenkins-api">Jenkins API</h2>
-
-<p>The <strong>Jenkins Operator</strong> generates and configures Basic Authentication token for Jenkins Go client
-and stores it in a Kubernetes Secret.</p>
-
-<h2 id="kubernetes">Kubernetes</h2>
-
-<p>Kubernetes API permissions are limited by the following roles:</p>
-
-<ul>
-<li><a href="https://github.com/jenkinsci/kubernetes-operator/blob/v0.6.0/deploy/all-in-one-v1alpha2.yaml">jenkins-operator role</a><br /></li>
-<li><a href="https://github.com/jenkinsci/kubernetes-operator/blob/v0.6.0/pkg/configuration/base/resources/rbac.go">Jenkins Master role</a></li>
-</ul>
-
-<p>Since <strong>Jenkins Operator</strong> must be able to grant permission for its deployed Jenkins masters
-to spawn pods (the <code>Jenkins Master role</code> above),
-the operator itself requires permission to create RBAC resources (the <code>jenkins-operator role</code> above).</p>
-
-<p>Deployed this way, any subject which may create a Pod (including a Jenkins job) may
-assume the <code>jenkins-operator</code> role by using its&rsquo; ServiceAccount, create RBAC rules, and thus escape its granted permissions.
-Any namespace to which the <code>jenkins-operator</code> is deployed must be considered to implicitly grant all
-possible permissions to any subject which can create a Pod in that namespace.</p>
-
-<p>To mitigate this issue <strong>Jenkins Operator</strong> should be deployed in one namespace, and the Jenkins CR should be created in a separate namespace.
-Section below contains instructions on how to do it.</p>
-
-<h2 id="setup-jenkins-operator-and-jenkins-in-separate-namespaces">Setup Jenkins Operator and Jenkins in separate namespaces</h2>
-
-<p>You need to create two namespaces, for example we&rsquo;ll call them <strong>jenkins</strong> for Jenkins and <strong>jenkins-operator</strong> for Jenkins Operator.</p>
+	<h1>Separate namespaces for Jenkins and Operator</h1>
+	<div class="lead">How to install Jenkins and Jenkins Operator in separate namespaces</div>
+	<p>You need to create two namespaces, for example we&rsquo;ll call them <strong>jenkins</strong> for Jenkins and <strong>jenkins-operator</strong> for Jenkins Operator.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl create ns jenkins-operator
 $ kubectl create ns jenkins</code></pre></div>
 <p>Next, you need to install resources necessary for the Operator to work in the <code>jenkins-operator</code> namespace. To do that,
@@ -1123,62 +1149,62 @@ copy the manifest you see below to <code>jenkins-operator-rbac.yaml</code>file.<
 <p>Now install the required resources in <code>jenkins-operator</code> namespace with:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply -n jenkins-operator -f jenkins-operator-rbac.yaml</code></pre></div>
 <p>There&rsquo;s only one thing left to install in <code>jenkins-operator</code> namespace, and that is the Operator itself. The manifest
-below contains the Operator as defined in all-in-one manifest found in <a href="/kubernetes-operator/docs/getting-started/latest/installing-the-operator/">Installating the Operator</a>
+below contains the Operator as defined in all-in-one manifest found in <a href="/kubernetes-operator/docs/getting-started/v0.6.x/installing-the-operator/">Installing the Operator</a>
 page, the only difference is that the one here sets <code>WATCH_NAMESPACE</code> to the <code>jenkins</code> namespace we created.</p>
 
 <p>Copy its content to <code>jenkins-operator.yaml</code> file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: jenkins-operator
-  labels:
-    control-plane: controller-manager
-spec:
-  selector:
-    matchLabels:
-      control-plane: controller-manager
-  replicas: <span style="color:#0000cf;font-weight:bold">1</span>
-  template:
-    metadata:
-      labels:
-        control-plane: controller-manager
-    spec:
-      serviceAccountName: jenkins-operator
-      securityContext:
-        runAsUser: <span style="color:#0000cf;font-weight:bold">65532</span>
-      containers:
-        - command:
-            - /manager
-          args:
-            - --leader-elect
-          image: virtuslab/jenkins-operator:v0.6.0
-          name: jenkins-operator
-          imagePullPolicy: IfNotPresent
-          securityContext:
-            allowPrivilegeEscalation: <span style="color:#204a87">false</span>
-          livenessProbe:
-            httpGet:
-              path: /healthz
-              port: <span style="color:#0000cf;font-weight:bold">8081</span>
-            initialDelaySeconds: <span style="color:#0000cf;font-weight:bold">15</span>
-            periodSeconds: <span style="color:#0000cf;font-weight:bold">20</span>
-          readinessProbe:
-            httpGet:
-              path: /readyz
-              port: <span style="color:#0000cf;font-weight:bold">8081</span>
-            initialDelaySeconds: <span style="color:#0000cf;font-weight:bold">5</span>
-            periodSeconds: <span style="color:#0000cf;font-weight:bold">10</span>
-          resources:
-            limits:
-              cpu: 100m
-              memory: 30Mi
-            requests:
-              cpu: 100m
-              memory: 20Mi
-          env:
-            - name: WATCH_NAMESPACE
-              value: jenkins
-      terminationGracePeriodSeconds: <span style="color:#0000cf;font-weight:bold">10</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">apiVersion<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>apps/v1<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span>kind<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>Deployment<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span>metadata<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>name<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>jenkins-operator<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>labels<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span>control-plane<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>controller-manager<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span>spec<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>selector<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span>matchLabels<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>control-plane<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>controller-manager<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>replicas<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>template<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span>metadata<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>labels<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span>control-plane<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>controller-manager<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span>spec<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>serviceAccountName<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>jenkins-operator<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>securityContext<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span>runAsUser<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">65532</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>containers<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span>-<span style="color:#f8f8f8;text-decoration:underline"> </span>command<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>-<span style="color:#f8f8f8;text-decoration:underline"> </span>/manager<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>args<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>-<span style="color:#f8f8f8;text-decoration:underline"> </span>--leader-elect<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>image<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>virtuslab/jenkins-operator<span style="color:#000;font-weight:bold">:</span>v0<span style="color:#0000cf;font-weight:bold">.6</span><span style="color:#0000cf;font-weight:bold">.0</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>name<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>jenkins-operator<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>imagePullPolicy<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>IfNotPresent<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>securityContext<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>allowPrivilegeEscalation<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>livenessProbe<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>httpGet<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">              </span>path<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>/healthz<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">              </span>port<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">8081</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>initialDelaySeconds<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">15</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>periodSeconds<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">20</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>readinessProbe<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>httpGet<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">              </span>path<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>/readyz<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">              </span>port<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">8081</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>initialDelaySeconds<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>periodSeconds<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">10</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>resources<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>limits<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">              </span>cpu<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>100m<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">              </span>memory<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>30Mi<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>requests<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">              </span>cpu<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>100m<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">              </span>memory<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>20Mi<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span>env<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">            </span>-<span style="color:#f8f8f8;text-decoration:underline"> </span>name<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>WATCH_NAMESPACE<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">              </span>value<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>jenkins<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>terminationGracePeriodSeconds<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">10</span></code></pre></div>
 <p>Install the Operator in <code>jenkins-operator</code> namespace with:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply -n jenkins-operator -f jenkins-operator.yaml</code></pre></div>
 <p>You have installed the Operator in <code>jenkins-operator</code> namespace, watching for Jenkins in <code>jenkins</code> namespace. Now
@@ -1366,7 +1392,7 @@ deploying actual Jenkins instance there.</p>
 <p>Now apply it with:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply -n jenkins -f jenkins-ns-rbac.yaml</code></pre></div>
 <p>The last thing to do is to deploy Jenkins. Below you can find an example Jenkins resource manifest.
-It&rsquo;s the same as one used in <a href="/kubernetes-operator/docs/getting-started/latest/deploying-jenkins/">Deploying Jenkins</a>.
+It&rsquo;s the same as one used in <a href="/kubernetes-operator/docs/getting-started/v0.6.x/deploying-jenkins/">Deploying Jenkins</a>.
 Copy it to <code>jenkins-instance.yaml</code></p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">apiVersion<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>jenkins.io/v1alpha2<span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline"></span>kind<span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>Jenkins<span style="color:#f8f8f8;text-decoration:underline">
@@ -1427,13 +1453,9 @@ Copy it to <code>jenkins-instance.yaml</code></p>
 <p>With this, you have just set up Jenkins Operator and Jenkins in separate namespaces. Now the Operator will run in
 its own namespace (<code>jenkins-operator</code>), watch for CRs in <code>jenkins</code> namespace, and deploy Jenkins there.</p>
 
-<h2 id="report-a-security-vulnerability">Report a Security Vulnerability</h2>
-
-<p>If you find a vulnerability or any misconfiguration in Jenkins, please report it in the <a href="https://github.com/jenkinsci/kubernetes-operator/issues">issues</a>.</p>
-
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified August 20, 2021
+	<div class="text-muted mt-5 pt-3 border-top">Last modified August 5, 2019
 </div>
 </div>
 
