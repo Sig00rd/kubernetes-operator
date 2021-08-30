@@ -2990,7 +2990,7 @@ You can change versions of pre-installed plugins by modifying your Jenkins Custo
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;   &lt;/span&gt;-&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;name&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;simple-theme-plugin&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;     &lt;/span&gt;version&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;0.6&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;After applying modifications to Jenkins Custom Resource &lt;code&gt;spec.basePlugins&lt;/code&gt; or &lt;code&gt;plugins&lt;/code&gt; section, &lt;strong&gt;Jenkins Operator&lt;/strong&gt;
-will automatically install plugins after the Jenkins Controller pod restart.&lt;/p&gt;
+will automatically install plugins after the Jenkins Controller pod restarts.&lt;/p&gt;
 
 &lt;h2 id=&#34;customization-via-groovy-scripts-and-casc-yamls&#34;&gt;Customization via Groovy Scripts and CaSC yamls&lt;/h2&gt;
 
@@ -3007,14 +3007,14 @@ both running, and Jenkins is deployed in the &lt;code&gt;jenkins&lt;/code&gt; na
 &lt;p&gt;The overall process of configuration can be divided into:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Creating a Custom Resource JenkinsGroovyScript, which contains Groovy script you want to execute.&lt;/li&gt;
+&lt;li&gt;Creating a &lt;code&gt;JenkinsGroovyScript&lt;/code&gt; Custom Resource, which contains Groovy script you want to execute.&lt;/li&gt;
 &lt;li&gt;Optionally creating a Kubernetes Secret if you need to store secrets like password or certificates.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;1-creating-a-secret&#34;&gt;1. Creating a Secret&lt;/h3&gt;
 
 &lt;p&gt;In case we want to use confidential data, we have to start by creating a Secret resource to wrap it in.
-Since it’s a secret, it would be a good idea to encode it. Running:&lt;/p&gt;
+Kubernetes stores secrets in base64 format, so we have to encode it. Running:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#204a87&#34;&gt;echo&lt;/span&gt; -n &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; base64&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;will produce the following output:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;SGVsbG8gd29ybGQ=&lt;/code&gt;&lt;/pre&gt;
@@ -3063,7 +3063,7 @@ You will see a tiny “Hello World” on the main page.&lt;/p&gt;
 &lt;p&gt;The overall process of customization can be divided into:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Creating a JenkinsConfigurationAsCode Custom Resource, which contains configuration code in data section.&lt;/li&gt;
+&lt;li&gt;Creating a &lt;code&gt;JenkinsConfigurationAsCode&lt;/code&gt; Custom Resource, which contains configuration code in data section.&lt;/li&gt;
 &lt;li&gt;Optionally creating a Kubernetes Secret if you need to store secrets like passoword or certificates.
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
