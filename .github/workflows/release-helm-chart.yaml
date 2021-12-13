@@ -24,8 +24,7 @@ jobs:
           sed -i "0,/version:.*/s//version: ${{ github.event.inputs.chartVersion }}/" chart/jenkins-operator/Chart.yaml
 
           if [ ${{ github.event.inputs.appVersion }} ] ; then
-            sed -i "/appVersion:.*/s//appVersion: ${{ github.event.inputs.appVersion }}/" chart/jenkins-operator/Chart.yaml
-          fi
+            sed -i "/appVersion:.*/s//appVersion: \"${{ github.event.inputs.appVersion }}\"/" chart/jenkins-operator/Chart.yaml
 
           make helm-release-latest
 
