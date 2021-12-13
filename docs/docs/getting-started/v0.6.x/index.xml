@@ -4,7 +4,7 @@
     <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/</link>
     <description>Recent Hugo news from gohugo.io</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jenkinsci.github.io/kubernetes-operator/img/hugo.png</url>
       <title>GoHugo.io</title>
@@ -22,7 +22,7 @@
     <item>
       <title>Docs: Installing the Operator</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/installing-the-operator/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/installing-the-operator/</guid>
       <description>
@@ -908,7 +908,7 @@ below is the full list of those volumeMounts:&lt;/p&gt;
     <item>
       <title>Docs: Deploying Jenkins</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/deploying-jenkins/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/deploying-jenkins/</guid>
       <description>
@@ -1010,7 +1010,7 @@ kubectl get secret jenkins-operator-credentials-&amp;lt;cr_name&amp;gt; -o &lt;s
     <item>
       <title>Docs: Customizing Jenkins</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/customizing-jenkins/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/customizing-jenkins/</guid>
       <description>
@@ -1192,7 +1192,7 @@ The secrets are loaded to &lt;code&gt;secrets&lt;/code&gt; map.&lt;/p&gt;
     <item>
       <title>Docs: Configuring Seed Jobs and Pipelines</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/configuring-seed-jobs-and-pipelines/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/configuring-seed-jobs-and-pipelines/</guid>
       <description>
@@ -1475,7 +1475,7 @@ stringData:
     <item>
       <title>Docs: Configuring backup and restore</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/configuring-backup-and-restore/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/configuring-backup-and-restore/</guid>
       <description>
@@ -1567,7 +1567,7 @@ up. Therefore, the backup script makes a copy of jobs history only.&lt;/p&gt;
     <item>
       <title>Docs: Separate namespaces for Jenkins and Operator</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/separate-namespaces/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/separate-namespaces/</guid>
       <description>
@@ -2121,7 +2121,7 @@ its own namespace (&lt;code&gt;jenkins-operator&lt;/code&gt;), watch for CRs in 
     <item>
       <title>Docs: Custom backup and restore providers</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/custom-backup-and-restore/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/custom-backup-and-restore/</guid>
       <description>
@@ -2304,7 +2304,7 @@ the number of backups under control, e.g. Cloud Formation fragment:&lt;/p&gt;
     <item>
       <title>Docs: AKS</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/aks/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/aks/</guid>
       <description>
@@ -2328,7 +2328,7 @@ restart of a Jenkins pod over and over again.&lt;/p&gt;
     <item>
       <title>Docs: LDAP</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/ldap/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/ldap/</guid>
       <description>
@@ -2456,7 +2456,7 @@ encoded by Kubernetes when the manifest is applied.&lt;/p&gt;
     <item>
       <title>Docs: OpenShift</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/openshift/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/openshift/</guid>
       <description>
@@ -2472,7 +2472,7 @@ encoded by Kubernetes when the manifest is applied.&lt;/p&gt;
     <item>
       <title>Docs: Schema</title>
       <link>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/schema/</link>
-      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/v0.6.x/schema/</guid>
       <description>
