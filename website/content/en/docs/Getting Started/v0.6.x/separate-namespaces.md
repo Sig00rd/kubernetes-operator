@@ -2,7 +2,7 @@
 title: "Separate namespaces for Jenkins and Operator"
 linkTitle: "Separate namespaces for Jenkins and Operator"
 weight: 6
-date: 2021-12-08
+date: 2021-12-13
 description: >
     How to install Jenkins and Jenkins Operator in separate namespaces
 ---
